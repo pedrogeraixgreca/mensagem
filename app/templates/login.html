@@ -1,0 +1,40 @@
+{%  extends 'base.html'%}
+
+{%block conteudo%}
+
+<div class="offset-4 col-4 list-div bg-dark border mt-3 rounded">
+    <form action="submit" , method="post">
+        <div class="row" >
+            <div class="col-12">
+                <P></P>
+                <h2 class="text-center" style="color:rgb(243, 171, 62)">voce esperava menagemmas era eu dio</h2>
+                <div>
+                    <div>
+                    {% for message in messages %}
+                    <div class="alert alert-danger">
+                        <strong>deu bosta</strong> {{ message }}
+                    </div>
+                    {% endfor %}
+                <div class="form-group">
+                    <label for="username"  style="color:rgb(255, 175, 55)" >User:</label>
+                    <input type="text" , class="form-control" id="username" name="username" placeholder="username" >
+                </div>
+                <div class="form-group">
+                    <label for="password" style="color:rgb(255, 175, 55)">password:</label>
+                    <input type="password" , class="form-control" id="password" name="password" placeholder="senha">
+                </div>
+                <div>
+                    <a href="home.html">
+                <button type ="submit" class="btn btn-basisc" >enter</button>
+                    </a>
+                    <a href="regis">
+                        <button type ="button" class="btn btn-warning" >registrar</button>
+                    </a>
+                </div>
+                <p></p>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+{%endblock conteudo%}

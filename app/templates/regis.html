@@ -1,0 +1,36 @@
+{%  extends 'base.html'%}
+
+{%block conteudo%}
+    <div class ="container mt-4 list-div bg-dark ">
+        <form action="resgis" method="post">{% csrf_token%}
+            <h1>registro</h1>
+
+            <div class="form-group">
+                <label for="username">User</label>
+                <input type="text", class="form-control" id="username" name="username" placeholder="usuario" >
+            </div>
+
+            <div class="form-group">
+                <label for="email">email</label>
+                <input type="email", class="form-control" id="email" name="email" placeholder="email">
+            </div>
+
+            <div class="form-group">
+                <label for="password">Senha</label>
+                <input type="password", class="form-control" id="passw1" name="passw1" placeholder="senha">
+            </div>
+
+            <div class="form-group">
+                <label for="password">Repita a Senha</label>
+                <input type="password", class="form-control" id="passw2" name="passw2" placeholder="Repita a Senha">
+            </div>
+            {% for item in msg %}
+            <p>{{ item }}</p>
+            {% endfor %}
+            <div>
+                    <button type ="submit" class="btn btn-basisc" >enter</button>
+            </div>
+            
+        </form>
+    </div>
+{%endblock conteudo%}
