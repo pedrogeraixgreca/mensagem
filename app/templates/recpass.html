@@ -1,0 +1,16 @@
+{%  extends 'base.html'%}
+
+{%block conteudo%}
+
+<div>
+  <div class="form-group">
+    <label for="email">email</label>
+    <input type="email", class="form-control" id="email" name="email" placeholder="email">
+</div>
+      {% for item in msg %}
+            <p>{{ item }}</p>
+      {% endfor %}
+<button type ="submit" class="btn btn-basisc" >recuperar senha</button>
+</div>    
+
+{%endblock conteudo%}

@@ -20,10 +20,13 @@ from app import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',views.home,),
-    path('login',views.login_m,), 
-    path('login_user',views.login_user,),
-    path('resgistrar',views.resgistrar,),
-    path('regis',views.regis),
-    path('nova_senha',views.nova_senha)
+    path('',views.home),
+    path('login',views.login_u), 
+    path('login_user',views.login_user),
+    path('home',views.home),
+    path('logout',views.logout_user),
+    path('resgistrar',views.resgistrar),
+    path('registro',views.registro),
+    path('recpass',views.recpass),
+    path('recpass_v',views.recpass_v),
 ]
